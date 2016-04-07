@@ -14,4 +14,5 @@
 相关链接：
 
 [https://sourceware.org/gdb/onlinedocs/gdb/Separate-Debug-Files.html](https://sourceware.org/gdb/onlinedocs/gdb/Separate-Debug-Files.html)
+
 [http://stackoverflow.com/questions/10000335/how-to-use-debug-version-of-libc](http://stackoverflow.com/questions/10000335/how-to-use-debug-version-of-libc)
