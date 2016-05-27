@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Gdb-debugging : ">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Gdb-debugging</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/TheBeeMan/GDB-Debugging">View on GitHub</a>
+
+          <h1 id="project_title">Gdb-debugging</h1>
+          <h2 id="project_tagline"></h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/TheBeeMan/GDB-Debugging/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/TheBeeMan/GDB-Debugging/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a id="gdb-调试" class="anchor" href="#gdb-%E8%B0%83%E8%AF%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GDB 调试</h1>
+
+<hr>
+
+<h3>
+<a id="0-linux系统加载glibc-debugging-symbols进行调试" class="anchor" href="#0-linux%E7%B3%BB%E7%BB%9F%E5%8A%A0%E8%BD%BDglibc-debugging-symbols%E8%BF%9B%E8%A1%8C%E8%B0%83%E8%AF%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>0. linux系统加载glibc debugging symbols进行调试</h3>
+
+<blockquote>
+<ul>
+<li>debuginfo-install glibc*</li>
+<li>gdb somebin</li>
+<li>set verbose on</li>
+<li>show debug-file-directory</li>
+</ul>
+</blockquote>
+
+<p>设置verbose，查看gdb是否读取libc.so.6的符号信息。</p>
+
+<p>使用系统包管理工具安装的符号信息so默认路径是 /usr/lib/debug/lib64，查询方式：</p>
+
+<blockquote>
+<ul>
+<li>rpm -ql glibc-debuginfo.x86_64 0:2.17-106.el7_2.4|grep libc.so</li>
+</ul>
+</blockquote>
+
+<p><a href="https://sourceware.org/gdb/onlinedocs/gdb/Separate-Debug-Files.html">https://sourceware.org/gdb/onlinedocs/gdb/Separate-Debug-Files.html</a></p>
+
+<p><a href="http://stackoverflow.com/questions/10000335/how-to-use-debug-version-of-libc">http://stackoverflow.com/questions/10000335/how-to-use-debug-version-of-libc</a></p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Gdb-debugging maintained by <a href="https://github.com/TheBeeMan">TheBeeMan</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
